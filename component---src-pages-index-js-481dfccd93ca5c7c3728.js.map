@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-index-js-481dfccd93ca5c7c3728.js","mappings":"0JAMA,UAJkB,kBAChB","sources":["webpack://gatsby-starter-default/./src/pages/index.js"],"sourcesContent":["import * as React from \"react\"\n\nconst IndexPage = () => (\n  <div>home</div>\n)\n\nexport default IndexPage\n"],"names":[],"sourceRoot":""}
