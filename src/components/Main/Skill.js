@@ -13,7 +13,6 @@ const Background = styled.div`
 const Title = styled.p`
   font-size: 58px;
   font-weight: 800;
-  font-family: "M PLUS Rounded 1c", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,14 +45,35 @@ const ContentLight = styled.img`
 const Content = styled.div`
   margin-bottom: 50px;
   display: flex;
+  position: relative;
 `
 
-const CotnentText = styled("div")`
+const CotnentText = styled.div`
+  width: 100px;
+  height: 180px;
+  text-align: center;
   position: absolute;
-  top: ${props => props.key};
-  left: 58px;
-  font-weight: 500;
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  left: 1.3%;
+  font-weight: 600;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const ContentImagesSpace = styled.div`
+  width: 100px;
+  height: 180px;
+  position: absolute;
+  left: 18%;
+  display: flex;
+  align-items: center;
+`
+
+const ContentIamge = styled.img`
+  width: 200px;
+  height: 50px;
+  margin-right: 10px;
 `
 
 const Skill = function () {
@@ -61,17 +81,17 @@ const Skill = function () {
     query MyQuery {
       allDataJson {
         nodes {
-          data {
+          skill {
             index
             images {
-              base
+              publicURL
             }
           }
         }
       }
     }
   `)
-  const skillList = data.allDataJson.nodes[0].data
+  const skillList = data.allDataJson.nodes[0].skill
 
   return (
     <Background>
@@ -83,10 +103,19 @@ const Skill = function () {
         {skillList.map((value, key) => {
           console.log(value)
           return (
-            <Content>
+            <Content key={key}>
               <ContentImg src={Filming} />
               <ContentLight src={Light} />
-              <CotnentText key={653 + 229 * key}>{value.index}</CotnentText>
+              <CotnentText>{value.index}</CotnentText>
+              <ContentImagesSpace>
+                {value.images.map((imgValue, key) => {
+                    console.log(imgValue.publicURL)
+                    return (
+                      <ContentIamge src={imgValue.publicURL} key={key} />
+                    )
+                  })
+                }
+              </ContentImagesSpace>
             </Content>
           )
         })}

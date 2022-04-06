@@ -1,0 +1,58 @@
+{
+  "skill": [
+    {
+      "index": "Frontend",
+      "images": [
+        "./skill/html.png",
+        "./skill/css.png",
+        "./skill/javascript.png",
+        "./skill/React.png",
+        "./skill/vue.png",
+        "./skill/jquery.svg",
+        "./skill/redux.svg"
+      ]
+    },
+    {
+      "index": "Backend",
+      "images": [
+        "./skill/django.png",
+        "./skill/flask.png",
+        "./skill/python.svg",
+        "./skill/java.webp",
+        "./skill/springboot.png",
+        "./skill/mysql.png"
+      ]
+    },
+    {
+      "index": "Deployment",
+      "images": ["./skill/aws.webp", "./skill/docker.webp"]
+    },
+    {
+      "index": "Version Control",
+      "images": ["./skill/git.png", "./skill/github.png"]
+    }
+  ],
+  "project": [
+    {
+      "title": "온라인 복면가왕 커뮤니티",
+      "period": "2021.07 ~ 2021.08",
+      "description": "사용자 얼굴에 스티커를 입혀 얼굴을 가리고 노래 부르는 모습을 공유하는 플랫폼",
+      "image": "./projects/singer.png",
+      "content": [
+        "HTML/CSS, Javascript 활용하여 노래방 Page Front-End 개발",
+        "Django 활용하여 노래방 기능 Back-End 개발",
+        "OpenCV 활용하여 얼굴 인식 및 스티커 입히는 기능, 녹화 구현"
+      ]
+    },
+    {
+      "title": "네카라쿠배-java WEB",
+      "period": "2021.04 ~ 2021.05",
+      "description": "IT 기업 별 채용 공고를 직관적으로 비교할 수 있고, IT 채용 트렌드를 확인할 수 있는 플랫폼",
+      "image": "./projects/nklkb.png",
+      "content": [
+        "HTML/CSS, Javascript 사용하여 채용 비교 페이지 Front-End 개발",
+        "Java, Spring Boot 사용하여 사용자 페이지, 스크랩 페이지 Back-End 개발"
+      ]
+    }
+  ]
+}
