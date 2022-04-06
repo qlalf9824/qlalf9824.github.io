@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { graphql, useStaticQuery } from "gatsby"
 import Camera from "../../images/camera.svg"
 import Filming from "../../images/filming.png"
 import Light from "../../images/light.png"
@@ -47,7 +48,31 @@ const Content = styled.div`
   display: flex;
 `
 
+const CotnentText = styled("div")`
+  position: absolute;
+  top: ${props => props.key};
+  left: 58px;
+  font-weight: 500;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+`
+
 const Skill = function () {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      allDataJson {
+        nodes {
+          data {
+            index
+            images {
+              base
+            }
+          }
+        }
+      }
+    }
+  `)
+  const skillList = data.allDataJson.nodes[0].data
+
   return (
     <Background>
       <Title>
@@ -55,18 +80,16 @@ const Skill = function () {
         Skills
       </Title>
       <ContentSpace>
-        <Content>
-          <ContentImg src={Filming} />
-          <ContentLight src={Light} />
-        </Content>
-        <Content>
-          <ContentImg src={Filming} />
-          <ContentLight src={Light} />
-        </Content>
-        <Content>
-          <ContentImg src={Filming} />
-          <ContentLight src={Light} />
-        </Content>
+        {skillList.map((value, key) => {
+          console.log(value)
+          return (
+            <Content>
+              <ContentImg src={Filming} />
+              <ContentLight src={Light} />
+              <CotnentText key={653 + 229 * key}>{value.index}</CotnentText>
+            </Content>
+          )
+        })}
       </ContentSpace>
     </Background>
   )

@@ -12,11 +12,12 @@ const Background = styled.div`
 `
 const ArchivingImage = styled.img`
   width: 350px;
-  height: 500px;
+  height: 600px;
   box-shadow: 7px 3px 7px darkgrey;
 
   @media (max-width: 768px) {
     width: 300px;
+    height: 500px;
   }
 
   @media (max-width: 540px) {
