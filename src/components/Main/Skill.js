@@ -94,7 +94,7 @@ const Skill = function () {
   const skillList = data.allDataJson.nodes[0].skill
 
   return (
-    <Background>
+    <Background id="skill">
       <Title>
         <TtileImage src={Camera} alt="타이틀 이미지" />
         Skills
@@ -109,12 +109,9 @@ const Skill = function () {
               <CotnentText>{value.index}</CotnentText>
               <ContentImagesSpace>
                 {value.images.map((imgValue, key) => {
-                    console.log(imgValue.publicURL)
-                    return (
-                      <ContentIamge src={imgValue.publicURL} key={key} />
-                    )
-                  })
-                }
+                  console.log(imgValue.publicURL)
+                  return <ContentIamge src={imgValue.publicURL} key={key} />
+                })}
               </ContentImagesSpace>
             </Content>
           )

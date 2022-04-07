@@ -37,7 +37,8 @@
       "title": "온라인 복면가왕 커뮤니티",
       "period": "2021.07 ~ 2021.08",
       "description": "사용자 얼굴에 스티커를 입혀 얼굴을 가리고 노래 부르는 모습을 공유하는 플랫폼",
-      "image": "./projects/singer.png",
+      "skill": "Django, SpringBoot, HTML, CSS, Vue.js",
+      "github": "https://github.com/qlalf9824/MaskStar",
       "content": [
         "HTML/CSS, Javascript 활용하여 노래방 Page Front-End 개발",
         "Django 활용하여 노래방 기능 Back-End 개발",
@@ -48,10 +49,47 @@
       "title": "네카라쿠배-java WEB",
       "period": "2021.04 ~ 2021.05",
       "description": "IT 기업 별 채용 공고를 직관적으로 비교할 수 있고, IT 채용 트렌드를 확인할 수 있는 플랫폼",
-      "image": "./projects/nklkb.png",
+      "skill": "SpringBoot, HTML, CSS, JQuery",
+      "github": "https://github.com/qlalf9824/naka-web-project",
       "content": [
         "HTML/CSS, Javascript 사용하여 채용 비교 페이지 Front-End 개발",
         "Java, Spring Boot 사용하여 사용자 페이지, 스크랩 페이지 Back-End 개발"
+      ]
+    },
+    {
+      "title": "Anti-Virus Engine : AVE Maria ",
+      "period": "2020.8 ~ 2020.12",
+      "description": "한글 문서에 숨겨진 위협요소를 제거하여 안전하게 파일을 사용할 수 있도록 하는 솔루션",
+      "skill": "Python, pyQt5",
+      "github": "",
+      "content": ["관련 악성코드 수집", "Python으로 GUI 개발"]
+    }
+  ],
+  "career": [
+    {
+      "title": "Voda WEB",
+      "position": "Front-End Developer",
+      "period": "2021.11 ~ 2022.03",
+      "description": "드론으로 취득한 이미지 데이터를 활용하여 3D 모델링 작업 후 결함 등 기록의 확인/관리가 가능하도록 하는 플랫폼",
+      "content": [
+        "React.js 사용하여 서비스 개발",
+        "single-spa 사용하여 Micro-Frontend 도입",
+        "Three.js 활용하여 3D 모델 렌더링 기능 개발",
+        "leaflet 활용하여 TIF 파일 렌더링 기능 개발",
+        "EC2, Docker 사용하여 배포 작업",
+        "프론트엔드 엔지니어 코드 리뷰 시스템 도입"
+      ]
+    },
+    {
+      "title": "Crack Detection WEB",
+      "position": "Full Stack Developer & TFT Leader",
+      "period": "2022.01 ~ 2022.02",
+      "description": "교량이나 아파트 등의 이미지에서 Crack을 탐지하여 탐지 결과를 보여주는 플랫폼",
+      "content": [
+        "서비스 USM, DB schema (MySQL) 설계",
+        "Flask 서버 구축 및 RESTful API 개발",
+        "React.js 사용하여 플랫폼 Front-End 개발",
+        "Docker, EC2 사용하여 배포 작업"
       ]
     }
   ]
