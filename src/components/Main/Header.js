@@ -44,40 +44,42 @@ const MainImage = styled.img`
 const Header = () => {
   const text1 = "Hello!"
   const text2 = "I'm Gayoung Ha"
-  const [hello, setHello] = React.useState("")
-  const [introduce, setIntroduce] = React.useState("")
-  const [description, setDescription] = React.useState("")
+  // const [hello, setHello] = React.useState("")
+  // const [introduce, setIntroduce] = React.useState("")
+  // const [description, setDescription] = React.useState("")
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setHello(hello => hello + text1[hello.length])
-    }, 200)
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setHello(hello => hello + text1[hello.length])
+  //   }, 200)
 
-    if (hello.length === text1.length) {
-      clearInterval(interval)
-      const interval1 = setInterval(() => {
-        setIntroduce(introduce => introduce + text2[introduce.length])
-      }, 200)
+  //   if (hello.length === text1.length) {
+  //     clearInterval(interval)
+  //     const interval1 = setInterval(() => {
+  //       setIntroduce(introduce => introduce + text2[introduce.length])
+  //     }, 200)
 
-      if (introduce.length === text2.length) {
-        clearInterval(interval1)
-        setDescription("행복한 개발자를 꿈꾸는 Front-End Developer 입니다.")
-      }
+  //     if (introduce.length === text2.length) {
+  //       clearInterval(interval1)
+  //       setDescription("행복한 개발자를 꿈꾸는 Front-End Developer 입니다.")
+  //     }
 
-      return () => clearInterval(interval1)
-    }
+  //     return () => clearInterval(interval1)
+  //   }
 
-    return () => {
-      clearInterval(interval)
-    }
-  }, [hello, introduce])
+  //   return () => {
+  //     clearInterval(interval)
+  //   }
+  // }, [hello, introduce])
 
   return (
     <Background id="home">
       <TextSpace>
-        <Hello>{hello}</Hello>
-        <Title>{introduce}</Title>
-        <Description>{description}</Description>
+        <Hello>Hello!</Hello>
+        <Title>I'm Gayoung Ha</Title>
+        <Description>
+          행복한 개발자를 꿈꾸는 Front-End Developer 입니다.
+        </Description>
       </TextSpace>
       <MainImage src={Me} />
     </Background>
