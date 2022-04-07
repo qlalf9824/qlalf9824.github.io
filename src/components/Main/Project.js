@@ -149,7 +149,6 @@ const Project = function () {
               <ContentDetail>Skill: {value.skill}</ContentDetail>
               <ContentListSpace>
                 {value.content.map((detail, key) => {
-                  console.log(detail)
                   return <ContentListItem key={key}>{detail}</ContentListItem>
                 })}
               </ContentListSpace>

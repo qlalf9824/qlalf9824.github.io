@@ -97,7 +97,6 @@ const Career = function () {
     }
   `)
   const careerList = data.allDataJson.nodes[0].career
-  console.log(careerList)
 
   return (
     <Background id="career">

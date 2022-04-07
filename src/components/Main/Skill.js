@@ -101,7 +101,6 @@ const Skill = function () {
       </Title>
       <ContentSpace>
         {skillList.map((value, key) => {
-          console.log(value)
           return (
             <Content key={key}>
               <ContentImg src={Filming} />
@@ -109,7 +108,6 @@ const Skill = function () {
               <CotnentText>{value.index}</CotnentText>
               <ContentImagesSpace>
                 {value.images.map((imgValue, key) => {
-                  console.log(imgValue.publicURL)
                   return <ContentIamge src={imgValue.publicURL} key={key} />
                 })}
               </ContentImagesSpace>
