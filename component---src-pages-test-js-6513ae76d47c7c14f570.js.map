@@ -1,1 +1,0 @@
-{"version":3,"file":"component---src-pages-test-js-6513ae76d47c7c14f570.js","mappings":"yJAMA,UAJiB,kBACf","sources":["webpack://gatsby-starter-default/./src/pages/test.js"],"sourcesContent":["import * as React from \"react\"\n\nconst TestPage = () => (\n  <div>test</div>\n)\n\nexport default TestPage\n"],"names":[],"sourceRoot":""}
