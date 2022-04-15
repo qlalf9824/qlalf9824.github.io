@@ -9,69 +9,77 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
+
+  @media (max-width: 540px) {
+    font-size: 35px;
+    justify-content: flex-start;
+  }
 }
 `
 
 const TextSpace = styled.div`
-  width: 500px;
+  margin-left: 30px;
 `
 
 const Title = styled.p`
-  font-size: 63px;
+  font-size: 50px;
   font-weight: 800;
   color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 35px;
+  }
 `
 
 const Hello = styled.p`
-  font-size: 55px;
+  font-size: 46px;
   font-weight: 800;
   color: #fff;
   margin-top: 200px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 33px;
+  }
 `
 
 const Description = styled.p`
   font-size: 20px;
   font-weight: 600;
   color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 10px;
+  }
 `
 
 const MainImage = styled.img`
-  width: 350px;
-  height: 450px;
+  width: 320px;
+  height: 430px;
   margin: 10px;
+
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 370px;
+  }
+
+  @media (max-width: 540px) {
+    display: none;
+  }
 `
 
 const Header = () => {
-  const text1 = "Hello!"
-  const text2 = "I'm Gayoung Ha"
-  // const [hello, setHello] = React.useState("")
-  // const [introduce, setIntroduce] = React.useState("")
-  // const [description, setDescription] = React.useState("")
-
-  // React.useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setHello(hello => hello + text1[hello.length])
-  //   }, 200)
-
-  //   if (hello.length === text1.length) {
-  //     clearInterval(interval)
-  //     const interval1 = setInterval(() => {
-  //       setIntroduce(introduce => introduce + text2[introduce.length])
-  //     }, 200)
-
-  //     if (introduce.length === text2.length) {
-  //       clearInterval(interval1)
-  //       setDescription("행복한 개발자를 꿈꾸는 Front-End Developer 입니다.")
-  //     }
-
-  //     return () => clearInterval(interval1)
-  //   }
-
-  //   return () => {
-  //     clearInterval(interval)
-  //   }
-  // }, [hello, introduce])
-
   return (
     <Background id="home">
       <TextSpace>

@@ -16,11 +16,29 @@ const Title = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 28px;
+  }
 `
 const TtileImage = styled.img`
   width: 50px;
   height: 50px;
   margin-right: 5px;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 540px) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 const ContentSpace = styled.div`
@@ -29,17 +47,51 @@ const ContentSpace = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 540px) {
+    margin: 20px 0 10px 0;
+  }
 `
 
 const ContentImg = styled.img`
   width: 150px;
   height: 130px;
+
+  @media (max-width: 900px) {
+    width: 130px;
+    height: 110px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 60px;
+  }
+
+  @media (max-width: 540px) {
+    width: 50px;
+    height: 40px;
+  }
 `
 
 const ContentLight = styled.img`
-  width: 800px;
+  width: 700px;
   height: 180px;
   margin-left: 10px;
+
+  @media (max-width: 900px) {
+    width: 600px;
+    height: 150px;
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 80px;
+  }
+
+  @media (max-width: 540px) {
+    width: 250px;
+    height: 55px;
+  }
 `
 
 const Content = styled.div`
@@ -59,21 +111,62 @@ const CotnentText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 900px) {
+    height: 150px;
+    left: 0.7%;
+    font-size: 17px;
+  }
+
+  @media (max-width: 768px) {
+    width: 72px;
+    height: 80px;
+    left: -0.5%;
+    font-size: 8px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 540px) {
+    display: none;
+  }
 `
 
 const ContentImagesSpace = styled.div`
   width: 100px;
   height: 180px;
   position: absolute;
-  left: 18%;
+  left: 20%;
   display: flex;
   align-items: center;
+
+  @media (max-width: 900px) {
+    height: 150px;
+  }
+
+  @media (max-width: 768px) {
+    height: 80px;
+  }
+
+  @media (max-width: 540px) {
+    height: 54px;
+  }
 `
 
 const ContentIamge = styled.img`
-  width: 200px;
-  height: 50px;
+  width: 100px;
+  height: 40px;
   margin-right: 10px;
+
+  @media (max-width: 768px) {
+    width: 55px;
+    height: 25px;
+  }
+
+  @media (max-width: 540px) {
+    width: 40px;
+    height: 20px;
+    margin-right: 5px;
+  }
 `
 
 const Skill = function () {

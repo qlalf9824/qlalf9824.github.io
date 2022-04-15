@@ -11,51 +11,70 @@ const Background = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    height: 50px;
+  }
 `
 const Title = styled.p`
-  width: 300px;
   font-size: 23px;
   font-weight: 500;
   color: #fff;
   line-height: 67px;
   margin-left: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 47px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+    font-weight: 500;
+  }
 `
 
 const NavSpace = styled.div`
   height: 70px;
-  width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 `
 
-const NavItem = {
-  fontSize: "20px",
-  fontWeight: "400",
-  color: "#fff",
-  lineHeight: "67px",
-}
+const NavItem = styled(({ active, ...props }) => <Link {...props} />)`
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 67px;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-right: 10px;
+    line-height: 47px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 360px) {
+    display: none;
+  }
+`
 
 const Navbar = function () {
   return (
     <Background>
       <Title>Gayoung's Portfolio</Title>
       <NavSpace>
-        <Link to="#home" style={NavItem}>
-          Home
-        </Link>
-        <Link to="#skill" style={NavItem}>
-          Skills
-        </Link>
-        <Link to="#archiving" style={NavItem}>
-          Archiving
-        </Link>
-        <Link to="#project" style={NavItem}>
-          Projects
-        </Link>
-        <Link to="#career" style={NavItem}>
-          Career
-        </Link>
+        <NavItem to="#home">Home</NavItem>
+        <NavItem to="#skill">Skills</NavItem>
+        <NavItem to="#archiving">Archiving</NavItem>
+        <NavItem to="#project">Projects</NavItem>
+        <NavItem to="#career">Career</NavItem>
       </NavSpace>
     </Background>
   )

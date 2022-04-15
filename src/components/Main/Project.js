@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Camera from "../../images/camera.svg"
 import Film from "../../images/film.png"
 import Octocat from "../../images/Octocat.png"
+
 const Background = styled.div`
   width: 100%;
   background-color: #ffd8cc;
@@ -16,28 +17,76 @@ const Title = styled.p`
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 28px;
+  }
 `
 const TtileImage = styled.img`
   width: 50px;
   height: 50px;
   margin-right: 5px;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 540px) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 const Content = styled.div`
   text-align: center;
   position: relative;
   height: 420px;
+
+  @media (max-width: 768px) {
+    height: 320px;
+  }
+
+  @media (max-width: 540px) {
+    height: 220px;
+  }
 `
 
 const ContentImage = styled.img`
   width: 700px;
   height: 430px;
+
+  @media (max-width: 768px) {
+    width: 500px;
+    height: 330px;
+  }
+
+  @media (max-width: 540px) {
+    width: 350px;
+    height: 230px;
+  }
+
+  @media (max-width: 370px) {
+    display: none;
+  }
 `
 
 const ContentTitle = styled.p`
   font-size: 28px;
   font-weight: 800;
   color: #ff7800;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 13px;
+  }
 `
 
 const ContentPeriod = styled.p`
@@ -45,6 +94,15 @@ const ContentPeriod = styled.p`
   font-weight: 400;
   margin-bottom: 10px;
   color: #f7f7f7;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 8px;
+    margin-bottom: 7px;
+  }
 `
 
 const ContentTextSpace = styled.div`
@@ -60,6 +118,17 @@ const ContentDescription = styled.p`
   margin: 0 auto;
   margin-bottom: 10px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    width: 370px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 540px) {
+    width: 260px;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
 `
 
 const ContentDetail = styled.p`
@@ -68,6 +137,16 @@ const ContentDetail = styled.p`
   width: 500px;
   margin: 0 auto;
   text-align: left;
+
+  @media (max-width: 768px) {
+    width: 370px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 540px) {
+    width: 260px;
+    font-size: 9px;
+  }
 `
 
 const ContentListSpace = styled.ul`
@@ -77,11 +156,29 @@ const ContentListSpace = styled.ul`
   padding-left: 15px;
   height: 88px;
   margin-top: 15px;
+
+  @media (max-width: 768px) {
+    width: 370px;
+  }
+
+  @media (max-width: 540px) {
+    margin-top: 8px;
+    height: 65px;
+    width: 265px;
+  }
 `
 
 const ContentListItem = styled.li`
   font-size: 18px;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 8px;
+  }
 `
 
 const ContentGithub = styled.button`
@@ -105,11 +202,35 @@ const ContentGithub = styled.button`
     background-color: #fc6c4f;
     box-shadow: none;
   }
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    margin-top: 0px;
+  }
+
+  @media (max-width: 540px) {
+    width: 100px;
+    height: 25px;
+    font-size: 11px;
+    margin-top: 0px;
+  }
 `
 
 const ContentGithubImage = styled.img`
   width: 35px;
   height: 35px;
+
+  @media (max-width: 768px) {
+    width: 23px;
+    height: 23px;
+  }
+
+  @media (max-width: 540px) {
+    width: 18px;
+    height: 18px;
+  }
 `
 
 const Project = function () {
